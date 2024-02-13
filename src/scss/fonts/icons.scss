@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.woff?74hqje") format("woff"),
+  url("../fonts/icons.svg?74hqje#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+%ic {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+  &:before {
+    @extend %ic;
+    display: block;
+  }
+}
+[class^="_icon-"]::before,
+[class^="_icon-"]::after,
+[class*=" _icon-"]::before,
+[class*=" _icon-"]::after {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+._icon-CaretDown:before {
+  content: "\e900";
+}
+._icon-CaretLeft:before {
+  content: "\e901";
+}
+._icon-CaretRight:after {
+  content: "\e902";
+}
+._icon-CaretUp:after {
+  content: "\e903";
+}
+._icon-Cart:before {
+  content: "\e904";
+}
+._icon-Clock-Square:before {
+  content: "\e909";
+}
+._icon-Dialog:before {
+  content: "\e90b";
+}
+._icon-Facebook:before {
+  content: "\e90d";
+}
+._icon-Hand-Shake:before {
+  content: "\e90e";
+}
+._icon-Insta:before {
+  content: "\e911";
+}
+._icon-List:before {
+  content: "\e912";
+}
+._icon-MagnifyingGlass:before {
+  content: "\e913";
+}
+._icon-Paperclip:before {
+  content: "\e914";
+}
+._icon-Play:before {
+  content: "\e916";
+}
+._icon-Shield:before {
+  content: "\e917";
+}
+._icon-Shop:before {
+  content: "\e91b";
+}
+._icon-Stars-Minimalistic:before {
+  content: "\e91f";
+}
+._icon-Telegra:before {
+  content: "\e922";
+}
+._icon-Waterdrops:before {
+  content: "\e923";
+}
+._icon-X:before {
+  content: "\e926";
+}
+
+
+
