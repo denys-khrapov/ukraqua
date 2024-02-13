@@ -119,7 +119,7 @@ body {
 .container {
   width: 100%;
   max-width: 864px;
-  padding: 0 32px;
+  padding: 0 16px;
   margin: 0 auto;
   @media (min-width: $pc) {
     max-width: $containerWidth + px;
