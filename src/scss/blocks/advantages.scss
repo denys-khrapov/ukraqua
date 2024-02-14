@@ -135,7 +135,9 @@
             gap: 48px;
             align-self: stretch;
             flex-wrap: wrap;
-
+            @media (min-width: $pc) {
+                padding: 0;
+            }
             .advantages__content-tittle {
                 display: flex;
                 min-width: 288px;

@@ -1,18 +1,23 @@
 export function additional() {
-  // const swiper = new Swiper('.reviews__swiper', {
+  reviewsSwiper()
 
-  //     loop: true,
 
-  //     pagination: {
-  //       el: '.reviews-pagination',
-  //       type: 'bullets'
-  //     },
-
-  //     navigation: {
-  //       nextEl: '.reviews-button-next',
-  //       prevEl: '.reviews-button-prev',
-  //     },
-  //   });
+  function reviewsSwiper() {
+    let swiperReviews = new Swiper('.reviews__swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+      loop: false,
+      speed: 600,
+      navigation: {
+        nextEl: '.reviews__navigation .reviews-button-next',
+        prevEl: '.reviews__navigation .reviews-button-prev'
+      },
+      pagination: {
+        el: '.reviews__navigation .reviews-pagination',
+        clickable: true
+      }
+    })
+  }
 
 
 
