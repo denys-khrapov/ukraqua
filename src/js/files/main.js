@@ -18,5 +18,19 @@ export function main() {
 
 			}
 		})
+		let swiperHero = new Swiper('.slider-hero', {
+			slidesPerView: 1,
+			loop: false,
+			effect: 'fade',
+			speed: 600,
+			navigation: {
+				nextEl: '.slider-hero__nav .swiper-button-next',
+				prevEl: '.slider-hero__nav .swiper-button-prev'
+			},
+			pagination: {
+				el: '.slider-hero__nav .swiper-pagination',
+				clickable: true
+			}
+		})
 	}
 }

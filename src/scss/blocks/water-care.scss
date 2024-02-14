@@ -3,9 +3,6 @@
   @media (min-width: $pc) {
     padding: 32px 0;
   }
-  // .water-care__container
-  &__container {
-  }
   // .water-care__slider
   &__slider {
     overflow: visible;
@@ -21,19 +18,6 @@
   &__slide {
     height: auto;
   }
-}
-.container {
-}
-.swiper {
-}
-.slider-water-care {
-  // .slider-water-care__nav
-  &__nav {
-  }
-}
-.swiper-wrapper {
-}
-.swiper-slide {
 }
 .slide-water-care {
   width: 100%;
