@@ -241,6 +241,18 @@
             padding: 120px 0px 32px 0px;
             justify-content: center;
             align-items: center;
+            ._icon-CaretUp {
+                color: var(--Blue-source);
+                text-align: center;
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%;
+                &::after {
+                    color: var(--Blue-source); 
+                }
+            }
         }
     }
 }
