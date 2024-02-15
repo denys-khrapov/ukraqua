@@ -38,11 +38,21 @@ export function additional() {
   });
 
   // FOOTER SECTION акардион локации
-  $(document).ready(function () {
-    $('.accordion-header').click(function () {
-      $(this).next('.accordion-content').slideToggle();
-      $(this).toggleClass('active');
-      $('.accordion-header').not(this).removeClass('active');
+  $(document).ready(function() {
+    $('.accordion-header').click(function() {
+      if ($(this).closest('.header').length) {
+        var isAlreadyOpen = $(this).hasClass('active');
+        $('.header .accordion-header').not(this).removeClass('active').next('.accordion-content').slideUp();
+        if (!isAlreadyOpen) {
+          $(this).addClass('active').next('.accordion-content').slideDown();
+        } else {
+          $(this).removeClass('active').next('.accordion-content').slideUp();
+        }
+      } else {
+        $(this).next('.accordion-content').slideToggle();
+        $(this).toggleClass('active');
+        $('.accordion-header').not(this).removeClass('active');
+      }
     });
   });
 

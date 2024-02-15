@@ -285,7 +285,7 @@
         }
     }
 
-    p {
+    span {
         color: var(--Blue-source);
         text-align: center;
         font-size: 12px;
@@ -295,6 +295,7 @@
         letter-spacing: 0.24px;
         display: flex;
         align-items: center;
+        flex-direction: row-reverse;
         gap: 6px;
 
         @media (min-width: $pc) {
@@ -305,7 +306,7 @@
             letter-spacing: 0.28px;
         }
 
-        &::after {
+        &::before {
             content: "";
             background: url(../../img/Links.svg);
             width: 16px;
