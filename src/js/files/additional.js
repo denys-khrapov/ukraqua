@@ -38,8 +38,9 @@ export function additional() {
   });
 
   // FOOTER SECTION акардион локации
-  $(document).ready(function() {
-    $('.accordion-header').click(function() {
+
+  $(document).ready(function () {
+    $('.accordion-header').click(function () {
       if ($(this).closest('.header').length) {
         var isAlreadyOpen = $(this).hasClass('active');
         $('.header .accordion-header').not(this).removeClass('active').next('.accordion-content').slideUp();
@@ -49,9 +50,16 @@ export function additional() {
           $(this).removeClass('active').next('.accordion-content').slideUp();
         }
       } else {
-        $(this).next('.accordion-content').slideToggle();
-        $(this).toggleClass('active');
-        $('.accordion-header').not(this).removeClass('active');
+        var content = $(this).next('.accordion-content');
+        if ($(this).hasClass('active')) {
+          $(this).removeClass('active');
+          content.slideUp();
+        } else {
+          $('.accordion-header.active').not(this).removeClass('active');
+          $('.accordion-content').not(content).slideUp();
+          $(this).addClass('active');
+          content.slideDown();
+        }
       }
     });
   });

@@ -350,6 +350,9 @@
         font-size: 24px;
         color: #007aff;
     }
+    &:hover {
+        background: var(--Blue-200);
+    }
 }
 
 .reviews-button-next {
@@ -365,5 +368,8 @@
     &::after {
         font-size: 24px;
         color: #007aff;
+    }
+    &:hover {
+        background: var(--Blue-200);
     }
 }
