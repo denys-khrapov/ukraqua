@@ -71,34 +71,26 @@ export function additional() {
     });
   });
 
-
+  // Popup
   $(document).ready(function() {
-    // Показываем popup после загрузки страницы
     $('#popup').fadeIn();
-
-    // Закрываем popup при клике на кнопку или вне popup
     $('.popup__btn, #popup').click(function(e) {
-        // Проверяем, был ли клик на кнопке
         if ($(e.target).hasClass('popup__btn')) {
-            // Закрываем popup при клике на кнопку
             closePopup();
         } else if ($(e.target).attr('id') === 'popup') {
-            // Закрываем popup при клике вне окна
             closePopup();
         }
     });
 
-    // Функция для закрытия popup
     function closePopup() {
         $('#popup').css('right', '-100%');
         $('body').removeClass('popup-open');
     }
 
-    // Открываем popup с анимацией
     setTimeout(function() {
         $('#popup').css('right', '0');
         $('body').addClass('popup-open');
-    }, 2000); // Задержка для плавного выезда
+    }, 2000);
 });
 
 }
