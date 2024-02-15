@@ -1,0 +1,51 @@
+a.link, span.link {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  color: var(--Blue-source);
+  width: fit-content;
+  text-overflow: ellipsis;
+  font-family: $fontFamily;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: 0.24px;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--Blue-600);
+    transition: width 0.4s ease-out;
+  }
+  @media (min-width: $pc) {
+    font-size: $fontSize;
+    font-weight: 400;
+    letter-spacing: 0.28px;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--Blue-600);
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  &:active {
+    color: var(--Blue-400);
+    &::after {
+      width: 100%;
+      background: var(--Blue-400);
+    }
+  }
+  &.blocked {
+    color: var(--Light-Blue-100);
+    pointer-events: none;
+  }
+}
