@@ -83,12 +83,14 @@ export function additional() {
     });
 
     function closePopup() {
-        $('#popup').css('right', '-100%');
+        $('#popup').css('right', '-1000%');
+        $('.body').removeClass('popup-open');
         $('body').removeClass('popup-open');
     }
 
     setTimeout(function() {
         $('#popup').css('right', '0');
+        $('.body').addClass('popup-open');
         $('body').addClass('popup-open');
     }, 2000);
 });
