@@ -24,7 +24,11 @@ export function main() {
 		});
 		let swiperHero = new Swiper('.slider-hero', {
 			slidesPerView: 1,
-			loop: false,
+			loop: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false
+			},
 			effect: 'fade',
 			speed: 600,
 			navigation: {

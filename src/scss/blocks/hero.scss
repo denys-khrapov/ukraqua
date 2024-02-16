@@ -1,5 +1,6 @@
 .hero {
   padding: 32px 0;
+  background: var(--Main-Background-1);
   // .hero__container
   &__container {
     @media (min-width: $pc) {
@@ -99,7 +100,7 @@
       height: 100%;
       opacity: 0.75;
       z-index: 1;
-      background: linear-gradient(179deg, rgba(55, 71, 86, 0.00) 0.67%, #374756 60.24%);
+      background: linear-gradient(82deg, rgba(55, 71, 86, 0) 32.67%, #374756 60.24%);
       pointer-events: none;
     }
     img {

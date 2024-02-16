@@ -128,7 +128,7 @@
   }
 }
 .header {
-  background: var(--White-100);
+  background: var(--Main-Background-1);
   // .header__container
   &__container {
     @media (min-width: $pc) {
@@ -642,7 +642,7 @@
     background: var(--White-100);
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.10);
     padding: 16px 24px;
-    width: 100%;
+    width: 167px;
     position: absolute;
     top: 100%;
     left: 50%;
