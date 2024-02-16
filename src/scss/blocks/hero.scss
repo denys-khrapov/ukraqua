@@ -100,8 +100,11 @@
       height: 100%;
       opacity: 0.75;
       z-index: 1;
-      background: linear-gradient(82deg, rgba(55, 71, 86, 0) 32.67%, #374756 60.24%);
+      background: linear-gradient(179deg, rgba(55, 71, 86, 0.00) 0.67%, #374756 60.24%);
       pointer-events: none;
+      @media (min-width: $pc) {
+        background: linear-gradient(82deg, rgba(55, 71, 86, 0) 32.67%, #374756 60.24%);
+      }
     }
     img {
       width: 100%;
