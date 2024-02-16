@@ -1,5 +1,5 @@
 .water-care {
-  padding: 41.5px 0;
+  padding: 30.5px 0;
   @media (min-width: $pc) {
     padding: 32px 0;
   }
@@ -24,12 +24,15 @@
   max-width: 288px;
   min-height: 288px;
   border-radius: 8px;
-  background: var(--Light-Blue-source);
   display: flex;
+  background-color: var(--Light-Blue-source);
   align-items: center;
   overflow: hidden;
+  transition: all 0.4s;
   @media (any-hover: hover) {
     &:hover {
+      background-color: var(--Blue-50);
+      box-shadow: 0 0 16px 0 rgba(37, 89, 136, 0.25);
       .slide-water-care__image-holder {
         img {
           right: -50px;
@@ -46,9 +49,11 @@
   &--main {
     align-items: flex-start;
     padding: 16px;
-    background-image: url("../../img/water-care-slide-main.jpg");
+    background-image: url("../../img/water-care-slide-main.png");
+    background-color: var(--Blue-source);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: 0 100%;
     .slide-water-care__content {
       row-gap: 8px;
       padding: 0;
@@ -75,6 +80,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 16px;
+        justify-content: space-between;
       }
     }
     ul li::before {
@@ -119,6 +125,11 @@
     }
     @media (min-width: $pc) {
       padding: 32px 32px 27px 32px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--Blue-800);
+      }
     }
   }
   // .slide-water-care__image-holder

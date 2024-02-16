@@ -109,6 +109,9 @@
       object-fit: cover;
       transform: scale(1.2);
       transition: transform 0.4s;
+      @media (min-width: $pc) {
+        object-position: 0;
+      }
     }
     .swiper-slide-active & {
       img {

@@ -74,3 +74,27 @@
     }
   }
 }
+.hero .swiper-button-prev, .hero .swiper-button-next {
+  width: 32px;
+  height: 32px;
+  @media (min-width: $pc) {
+    width: 64px;
+    height: 64px;
+  }
+}
+.hero .swiper-button-prev {
+  &::before {
+    font-size: 16px;
+    @media (min-width: $pc) {
+      font-size: 48px;
+    }
+  }
+}
+.hero .swiper-button-next {
+  &::after {
+    font-size: 16px;
+    @media (min-width: $pc) {
+      font-size: 48px;
+    }
+  }
+}

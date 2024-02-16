@@ -50,7 +50,7 @@
     flex: 1 0 0;
     @media (min-width: $pc) {
       row-gap: 48px;
-      padding: 66px 0 74px;
+      padding: 61px 0 74px;
       text-align: left;
       align-items: flex-start;
       max-width: 386px;
@@ -76,6 +76,9 @@
       }
       @media (min-width: $pc) {
         padding: 12px 28.5px;
+        font-size: $fontSize;
+        font-weight: 500;
+        line-height: 1.4;
         img {
           width: 20px;
           height: 20px;
@@ -161,6 +164,9 @@
   flex-wrap: wrap;
   gap: 24px;
   align-items: center;
+  @media (min-width: $pc) {
+    padding: 30px 0;
+  }
   &::before, &::after {
     content: "";
     position: absolute;
@@ -242,6 +248,9 @@
       font-weight: 500;
       padding: 12px 20px;
       font-size: 14px;
+      @media (min-width: $pc) {
+        padding: 12px 17px;
+      }
     }
   }
 }

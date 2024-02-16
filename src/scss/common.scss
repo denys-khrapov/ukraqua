@@ -1,1 +1,12 @@
-// Заголовки, загальні БЕМ блоки та інше...
+.badge {
+  border-radius: 12px;
+  color: var(--White-100);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.24px;
+  padding: 1px 8px;
+  &--orange {
+    background: var(--Orange-100);
+  }
+}
