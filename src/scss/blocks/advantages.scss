@@ -11,6 +11,9 @@
         padding: 64px 52px;
         max-width: 100%;
     }
+    .container {
+        padding: 0;
+    }
 
     .wrapper {
         display: flex;
@@ -184,7 +187,7 @@
     max-width: 1176px;
     align-items: center;
     align-content: center;
-    gap: 48px;
+    gap: 52px;
     flex-wrap: wrap;
 
     @media (min-width: $pc) {
@@ -274,6 +277,7 @@
     .advantages__content-box-item {
         display: flex;
         padding: 16px;
+        padding-left: 12px;
         justify-content: center;
         align-items: center;
         border-radius: 4px;
@@ -284,7 +288,7 @@
 
         @media (min-width: $pc) {
             height: 124px;
-            padding: 24px 32px;
+            padding: 24px 24px;
             border-radius: 6px;
             border-left: 8px solid var(--Blue-50);
             gap: 16px;
@@ -297,10 +301,12 @@
             font-weight: 600;
             line-height: 1.4;
             letter-spacing: 0.32px;
-            min-width: 148px;
+            min-width: 124px;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             gap: 8px;
+            max-width: 124px;
 
             @media (min-width: $pc) {
                 font-size: 24px;

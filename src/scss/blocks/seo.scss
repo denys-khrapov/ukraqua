@@ -23,8 +23,9 @@
         transition: max-height 0.3s ease-in-out;
 
         @media (min-width: $pc) {
-            padding: 96px 0px 176px 0px;
+            padding: 88px 0px 176px 0px;
             max-width: 1176px;
+            max-height: 664px;
             width: 100%;
             justify-content: space-between;
         }
@@ -52,10 +53,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 8px;
+    gap: 15px;
 
     @media (min-width: $pc) {
-        gap: 24px;
+        gap: 20px;
     }
 
     h3 {
@@ -194,6 +195,21 @@
             font-style: normal;
             font-weight: 600;
             line-height: 1.4;
+            transition: all 0.5s;
+            &:hover {
+                color: var(--Blue-600);
+                transition: all 0.5s;
+                &::after {
+                    color: var(--Blue-600);
+                }
+            }
+            &:active {
+                color: var(--Blue-400);
+                transition: all 0.5s;
+                &::after {
+                    color: var(--Blue-400);
+                }
+            }
         }
     }
 

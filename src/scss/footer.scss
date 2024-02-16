@@ -35,7 +35,7 @@
     justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
-    gap: 32px 16px;
+    gap: 29px 16px;
     flex-wrap: wrap;
 
     @media (min-width: $pc) {
@@ -55,6 +55,7 @@
 
         @media (min-width: $pc) {
             order: 1;
+            gap: 34px;
         }
     }
 }
@@ -70,7 +71,7 @@
 
     @media (min-width: $pc) {
         justify-content: center;
-        gap: 32px;
+        gap: 22px;
         order: 2;
         max-width: 776px;
     }
@@ -81,7 +82,7 @@
     min-width: 288px;
     align-items: flex-start;
     align-content: flex-start;
-    gap: 16px;
+    gap: 14px;
     flex: 1 0 0;
     flex-wrap: wrap;
 
@@ -95,13 +96,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 8px;
+        gap: 2px;
         flex: 1 0 0;
 
         @media (min-width: $pc) {
             width: 176px;
             align-items: flex-start;
-            gap: 12px;
+            gap: 0px;
         }
 
         h3 {
@@ -184,14 +185,14 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
     @media (min-width: $pc) {
-        padding: 16px 16px 16px 0;
+        padding: 8px 0px 16px 0;
         align-items: center;
         gap: 8px;
     }
 
     .accordion-header {
         display: flex;
-        padding: 8px 0px;
+        padding: 10px 0px;
         align-items: center;
         justify-content: center;
         gap: 8px;
@@ -259,7 +260,7 @@
     padding-bottom: 8px;
 
     @media (min-width: $pc) {
-        margin-top: 12px;
+        margin-top: 0px;
     }
 
     p {
@@ -297,6 +298,12 @@
 
         @media (min-width: $pc) {
             font-size: $fontSize;
+            &:before {
+                width: 16.667px;
+                height: 16.667px;
+                font-size: 16.667px;
+                opacity: 0.5;
+            }
         }
     }
 
@@ -313,13 +320,18 @@
             font-size: $fontSize;
         }
     }
+    @media (min-width: $pc) {
+        margin-top: 14px;
+    }
 }
 
 .footer__top-contact-logo {
     width: 100%;
     display: flex;
     justify-content: center;
-
+    @media (min-width: $pc) {
+        justify-content: flex-start;
+    }
     a {
         color: var(--Blue-source);
         text-align: center;
@@ -353,12 +365,11 @@
 
 .footer__top-contact-number {
     width: 100%;
-
     @media (min-width: $pc) {
         max-width: 175px;
         margin: 0 auto;
+        margin-left: 0;
     }
-
     address {
         display: flex;
         flex-direction: column;
@@ -465,6 +476,8 @@
 
     @media (min-width: $pc) {
         align-items: flex-start;
+        justify-content: flex-start;
+        gap: 13px;
     }
 
     li {
@@ -500,7 +513,7 @@
 
 .footer__center {
     display: flex;
-    padding: 16px;
+    padding: 20px;
     align-items: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -517,7 +530,7 @@
         justify-content: center;
         align-items: flex-start;
         align-content: flex-start;
-        gap: 8px 16px;
+        gap: 12px 12px;
         flex: 1 0 0;
         flex-wrap: wrap;
 
@@ -533,6 +546,7 @@
             a {
                 color: var(--Blue-source);
                 text-align: center;
+                font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 1.4;
@@ -570,7 +584,7 @@
 
         @media (min-width: $pc) {
             &:nth-of-type(1) {
-                width: 176px;
+                width: 152px;
             }
 
             &:nth-last-of-type(1) {

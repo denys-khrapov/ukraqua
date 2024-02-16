@@ -23,6 +23,7 @@
         @media (min-width: $pc) {
             max-width: 1540px;
             min-height: 576px;
+            padding: 0;
             position: relative;
             border-radius: 8px;
             overflow: hidden;
@@ -58,7 +59,7 @@
         align-items: flex-start;
         align-content: flex-start;
         flex-direction: column;
-        gap: 8px;
+        gap: 13px;
         align-self: stretch;
         flex-wrap: wrap;
 
@@ -131,7 +132,15 @@
                 border: 1px solid var(--Blue-100);
                 background: var(--White-100);
                 margin-top: 4px;
-
+                @media (any-hover: hover) {
+                    &:hover {
+                      border: 1px solid var(--Blue-300);
+                    }
+                  }
+                  &:focus {
+                    outline: none;
+                    border: 1px solid var(--Blue-300);
+                  }
                 @media (min-width: $pc) {
                     height: 56px;
                     padding: 16px;
