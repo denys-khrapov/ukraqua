@@ -69,10 +69,22 @@ export function additional() {
 
 	// FOOTER SECTION список телефонов
 	$(document).ready(function() {
-		$('.click__address-container').hover(function() {
-			$('.click__address-container').toggleClass('expanded');
+		if (window.innerWidth > 1280) {
+			$('.click__address-container').hover(function() {
+				$(this).toggleClass('expanded');
+			});
+		}
+		$(window).resize(function() {
+			if (window.innerWidth > 1280) {
+				$('.click__address-container').hover(function() {
+					$(this).toggleClass('expanded');
+				});
+			} else {
+				$('.click__address-container').off('mouseenter mouseleave');
+			}
 		});
 	});
+	
 
 	// Popup
 	$(document).ready(function() {
