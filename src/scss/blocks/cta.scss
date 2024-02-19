@@ -214,7 +214,7 @@
     }
 }
 
-.cta__form-tittle {
+.cta__form-title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -261,7 +261,7 @@
     }
 }
 
-.icon__form {
+.cta__icon {
     display: none;
 
     @media (min-width: $pc) {

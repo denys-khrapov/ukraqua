@@ -1,7 +1,11 @@
 export function additional() {
 	reviewsSwiper();
+	Seo();
+	Accordion();
+	HoverTelefone();
+	Popup();
 
-
+	// Reviews Swiper
 	function reviewsSwiper() {
 		let swiperReviews = new Swiper('.reviews__swiper', {
 			slidesPerView: 'auto',
@@ -19,27 +23,27 @@ export function additional() {
 		});
 	}
 
-
 	// SEO SECTION раскрытие блока
-	var container = document.getElementById('seo__container');
-	var button = document.getElementById('seo__btn');
+	function Seo() {
+		var container = document.getElementById('seo__container');
+		var button = document.getElementById('seo__btn');
 
-	button.addEventListener('click', function() {
-		if (container.style.maxHeight) {
-			container.style.maxHeight = null;
-			button.innerHTML = 'Розгорнути текст';
-			button.classList.add('collapsed');
-		} else {
-			container.style.maxHeight = container.scrollHeight + 'px';
-			button.innerHTML = 'Згорнути текст';
-			button.classList.remove('collapsed');
-		}
-	});
+		button.addEventListener('click', function () {
+			if (container.style.maxHeight) {
+				container.style.maxHeight = null;
+				button.innerHTML = 'Розгорнути текст';
+				button.classList.add('collapsed');
+			} else {
+				container.style.maxHeight = container.scrollHeight + 'px';
+				button.innerHTML = 'Згорнути текст';
+				button.classList.remove('collapsed');
+			}
+		});
+	}
 
 	// FOOTER SECTION акардион локации
-
-	$(document).ready(function() {
-		$('.accordion-header').click(function() {
+	function Accordion() {
+		$('.accordion-header').click(function () {
 			if ($(this).closest('.header').length) {
 				var isAlreadyOpen = $(this).hasClass('active');
 				$('.header .accordion-header').not(this).removeClass('active').next('.accordion-content').slideUp();
@@ -65,31 +69,31 @@ export function additional() {
 				}
 			}
 		});
-	});
+	}
 
 	// FOOTER SECTION список телефонов
-	$(document).ready(function() {
+	function HoverTelefone() {
 		if (window.innerWidth > 1280) {
-			$('.click__address-container').hover(function() {
+			$('.click__address-container').hover(function () {
 				$(this).toggleClass('expanded');
 			});
 		}
-		$(window).resize(function() {
+		$(window).resize(function () {
 			if (window.innerWidth > 1280) {
-				$('.click__address-container').hover(function() {
+				$('.click__address-container').hover(function () {
 					$(this).toggleClass('expanded');
 				});
 			} else {
 				$('.click__address-container').off('mouseenter mouseleave');
 			}
 		});
-	});
-	
+	}
 
 	// Popup
-	$(document).ready(function() {
+	function Popup() {
 		$('#popup').fadeIn();
-		$('.popup__btn, #popup').click(function(e) {
+
+		$('.popup__btn, #popup').click(function (e) {
 			if ($(e.target).hasClass('popup__btn')) {
 				closePopup();
 			} else if ($(e.target).attr('id') === 'popup') {
@@ -103,11 +107,11 @@ export function additional() {
 			$('body').removeClass('popup-open');
 		}
 
-		setTimeout(function() {
+		setTimeout(function () {
 			$('#popup').css('right', '0');
 			$('.body').addClass('popup-open');
 			$('body').addClass('popup-open');
 		}, 2000);
-	});
+	}
 
 }
