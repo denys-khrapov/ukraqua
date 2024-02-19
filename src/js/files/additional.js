@@ -54,10 +54,14 @@ export function additional() {
 					$(this).removeClass('active');
 					content.slideUp();
 				} else {
-					$('.accordion-header.active').not(this).removeClass('active');
-					$('.accordion-content').not(content).slideUp();
-					$(this).addClass('active');
-					content.slideDown();
+					var content = $(this).next('.accordion-content');
+					if ($(this).hasClass('active')) {
+						$(this).removeClass('active');
+						content.slideUp();
+					} else {
+						$(this).addClass('active');
+						content.slideDown();
+					}
 				}
 			}
 		});
@@ -65,7 +69,7 @@ export function additional() {
 
 	// FOOTER SECTION список телефонов
 	$(document).ready(function() {
-		$('.click__address').click(function() {
+		$('.click__address-container').hover(function() {
 			$('.click__address-container').toggleClass('expanded');
 		});
 	});

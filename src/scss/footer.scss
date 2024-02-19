@@ -249,7 +249,13 @@
         border: none;
     }
 }
-
+.accordion-content-link-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+}
 .accordion-content {
     display: none;
     flex-direction: column;
@@ -258,7 +264,23 @@
     gap: 8px;
     align-self: stretch;
     padding-bottom: 8px;
-
+    address {
+        color: var(--Light-Blue-900);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 130%;
+        letter-spacing: 0.24px;
+        @media (min-width: $pc) {
+            color: var(--Light-Blue-900);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.28px;
+        }
+    
+    }
     @media (min-width: $pc) {
         margin-top: 0px;
     }
@@ -275,7 +297,8 @@
 
 .accordion-content-link {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
     margin-top: 10px;
@@ -315,6 +338,7 @@
         font-weight: 400;
         line-height: 1.4;
         letter-spacing: 0.24px;
+        margin-left: auto;
 
         @media (min-width: $pc) {
             font-size: $fontSize;
@@ -376,7 +400,7 @@
         align-items: flex-start;
         text-align: center;
         gap: 8px;
-
+       
         @media (min-width: $pc) {
             height: 18px;
             overflow: hidden;
@@ -602,12 +626,49 @@
         letter-spacing: 0.24px;
     }
 }
-
+.click__address-container {
+    position: relative;
+}
 .click__address-container.expanded {
-    height: 100%;
+    width: 175px;
     border-radius: 8px;
+    overflow: visible;
     background: var(--White-100, #FFF);
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 8px 8px 0 0;
+    .click__address-container-box {
+        position: absolute;
+        top: 48px;
+        height: auto;
+        left: 0;
+        border-radius:0 0 8px 8px;
+        background: var(--White-100, #FFF);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding:8px 8px 24px 8px;
+        width: 100%;
+        a {
+            &:nth-of-type(1) {
+                color: var(--Blue-source);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 100%; 
+                letter-spacing: -0.72px;
+            }
+            &:nth-of-type(2) {
+                color: var(--Blue-source);
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                letter-spacing: 0.24px;
+            }
+        }
+    }
 }
 
 .click__address-container.expanded .click__address {
